@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily:{
         "Josefin-Sans": ["Josefin Sans"],
-      }
+        "Pacifico": ["Pacifico"],
+      },
     },
   },
   plugins: [],
