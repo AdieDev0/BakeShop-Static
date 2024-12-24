@@ -1,6 +1,7 @@
 import React from "react";
 import heroBg from "../assets/HeroBg.jpg";
 import { FaRegHandPointRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="relative">
