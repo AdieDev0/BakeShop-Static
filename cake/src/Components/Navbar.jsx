@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <div className="z-50 sticky bg-pink-400 px-5 md:px-52 py-4 w-full shadow-md">
+      <div className="z-50 sticky bg-red-400 px-5 md:px-52 py-4 w-full shadow-lg shadow-red-500">
         <div className="flex justify-between items-center">
           {/* Logo and Bakeshop Name */}
           <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ const Navbar = () => {
             {["MENU", "LOCATION", "PROMOS", "FRANCHISING", "CAREERS", "ORDER ONLINE"].map((item) => (
               <h2
                 key={item}
-                className="text-md text-white font-semibold decoration-pink-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer"
+                className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer"
               >
                 {item}
               </h2>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* MOBILE SIDEBAR */}
       <div
-        className={`fixed inset-y-0 left-0 z-40 w-64 bg-pink-400 text-white transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-y-0 left-0 z-40 w-64 bg-red-400 text-white transform transition-transform duration-300 ease-in-out ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -88,7 +88,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href="#"
-                className="flex items-center py-2 px-4 rounded hover:bg-pink-500 font-Josefin-Sans text-xl"
+                className="flex items-center py-2 px-4 rounded hover:bg-red-500 font-Josefin-Sans text-xl"
               >
                 {item}
               </a>

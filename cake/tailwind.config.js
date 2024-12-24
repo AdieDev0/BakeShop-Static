@@ -9,6 +9,7 @@ export default {
       fontFamily:{
         "Josefin-Sans": ["Josefin Sans"],
         "Pacifico": ["Pacifico"],
+        "Mountains-of-Christmas": ["Mountains of Christmas"]
       },
     },
   },
