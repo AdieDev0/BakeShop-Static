@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import cake from "../assets/Cake.png";
 import { BsSearchHeart } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { HiHome, HiLogout } from "react-icons/hi";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [menuIconTransition, setMenuIconTransition] = useState(false);
   const loadingRef = useRef(null);
 
   useEffect(() => {
@@ -13,6 +13,12 @@ const Navbar = () => {
       loadingRef.current.classList.add("hidden");
     }
   }, []);
+
+  const toggleSidebar = () => {
+    setMenuIconTransition(true);
+    setIsSidebarOpen(!isSidebarOpen);
+    setTimeout(() => setMenuIconTransition(false), 300); // Match the duration of the sidebar transition
+  };
 
   return (
     <div className="relative">
@@ -37,14 +43,7 @@ const Navbar = () => {
 
           {/* Navigation for larger screens */}
           <div className="hidden md:flex gap-5 items-center">
-            {[
-              "MENU",
-              "LOCATION",
-              "PROMOS",
-              "FRANCHISING",
-              "CAREERS",
-              "ORDER ONLINE",
-            ].map((item) => (
+            {["MENU", "LOCATION", "PROMOS", "FRANCHISING", "CAREERS", "ORDER ONLINE"].map((item) => (
               <h2
                 key={item}
                 className="text-md text-white font-semibold decoration-pink-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer"
@@ -57,10 +56,10 @@ const Navbar = () => {
 
           {/* Menu Button for smaller screens */}
           <button
-            className="md:hidden text-white text-2xl focus:outline-none"
-            onClick={() => setIsSidebarOpen(true)}
+            className={`md:hidden text-white text-2xl focus:outline-none transition-transform duration-300 ${menuIconTransition && "rotate-90"}`}
+            onClick={toggleSidebar}
           >
-            <AiOutlineMenu />
+            {isSidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button>
         </div>
       </div>
@@ -77,7 +76,7 @@ const Navbar = () => {
             <h3 className="text-xl font-Pacifico">ButterCup</h3>
             <button
               className="text-white text-2xl focus:outline-none"
-              onClick={() => setIsSidebarOpen(false)}
+              onClick={toggleSidebar}
             >
               <AiOutlineClose />
             </button>
@@ -85,19 +84,13 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <nav className="flex-1 p-4">
-            {[
-              { name: "Home", icon: <HiHome /> },
-              { name: "Logout", icon: <HiLogout /> },
-              { name: "Menu", icon: <HiHome /> },
-              { name: "Promos", icon: <HiHome /> },
-            ].map((item) => (
+            {["MENU", "LOCATION", "PROMOS", "FRANCHISING", "CAREERS", "ORDER ONLINE"].map((item) => (
               <a
-                key={item.name}
+                key={item}
                 href="#"
-                className="flex items-center gap-2 py-2 px-4 rounded hover:bg-pink-500"
+                className="flex items-center py-2 px-4 rounded hover:bg-pink-500 font-Josefin-Sans text-xl"
               >
-                {item.icon}
-                <span>{item.name}</span>
+                {item}
               </a>
             ))}
           </nav>
@@ -108,7 +101,7 @@ const Navbar = () => {
       {isSidebarOpen && (
         <div
           className="fixed inset-0 z-30 bg-black bg-opacity-50"
-          onClick={() => setIsSidebarOpen(false)}
+          onClick={toggleSidebar}
         ></div>
       )}
     </div>
