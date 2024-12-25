@@ -49,7 +49,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen p-10 md:p-20 font-sans">
+    <div className="bg-gradient-to-b from-red-400 via-white to-white min-h-screen p-10 md:p-20 font-sans">
       <div className="max-w-7xl mx-auto">
         <motion.h1
           variants={textVariants}
