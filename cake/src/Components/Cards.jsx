@@ -15,7 +15,7 @@ const Cards = () => {
             alt="Birthday Cake"
             className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Bakeshop</h3>
           </div>
@@ -26,9 +26,9 @@ const Cards = () => {
           <img
             src={foodShop}
             alt="Bake Shop"
-            className="object-cover inset-0 w-full h-full absolute"
+            className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Bakeshop</h3>
           </div>
@@ -38,9 +38,9 @@ const Cards = () => {
           <img
             src={party}
             alt="Party"
-            className="object-cover inset-0 w-full h-full absolute"
+            className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Bakeshop</h3>
           </div>
