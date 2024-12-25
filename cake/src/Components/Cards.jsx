@@ -25,17 +25,25 @@ const Cards = () => {
         <div className="border size-96 relative cursor-pointer group">
           <img
             src={foodShop}
-            alt=""
+            alt="Bake Shop"
             className="object-cover inset-0 w-full h-full absolute"
           />
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
+            <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
+            <h3 className="text-white">Bakeshop</h3>
+          </div>
         </div>
         {/* IMAGE 3 */}
         <div className="border size-96 relative cursor-pointer group">
           <img
             src={party}
-            alt=""
+            alt="Party"
             className="object-cover inset-0 w-full h-full absolute"
           />
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
+            <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
+            <h3 className="text-white">Bakeshop</h3>
+          </div>
         </div>
       </div>
     </div>
