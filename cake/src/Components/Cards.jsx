@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import birthdayCake from "../assets/cards/BirthdayCake.jpg";
 import foodShop from "../assets/cards/foodShop.jpg";
 import party from "../assets/cards/party.jpg";
@@ -6,55 +7,72 @@ import cakeIcon from "../assets/cards/CakeIcon.png";
 import Shop from "../assets/cards/Shop.png";
 import Party from "../assets/cards/Party.png";
 
-const Cards = () => {
-  return (
-    <div className="bg-white p-20">
-      <div className="flex gap-5 justify-between">
-        {/* IMAGE 1 */}
-        <div className="size-96 relative cursor-pointer group">
-          <img
-            src={birthdayCake}
-            alt="Birthday Cake"
-            className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
-          />
-          {/* HOVER */}
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={cakeIcon} alt="Cake Icon" className="size-36 mb-2" />
-            <h3 className="text-white font-Pacifico font-medium text-5xl">
-              Shop
-            </h3>
-          </div>
-        </div>
+const cardVariants = {
+  hover: {
+    scale: 1.03,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut",
+    },
+  },
+  tap: {
+    scale: 0.97,
+  },
+};
 
-        {/* IMAGE 2 */}
-        <div className="border size-96 relative cursor-pointer group">
-          <img
-            src={foodShop}
-            alt="Bake Shop"
-            className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
-          />
-          {/* HOVER */}
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={Shop} alt="Cake Icon" className="size-36 mb-2" />
-            <h3 className="text-white font-Pacifico font-medium text-5xl">
-              Bakeshop
-            </h3>
-          </div>
-        </div>
-        {/* IMAGE 3 */}
-        <div className="border size-96 relative cursor-pointer group">
-          <img
-            src={party}
-            alt="Party"
-            className=" object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
-          />
-          {/* HOVER */}
-          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={Party} alt="Cake Icon" className="size-36 mb-2" />
-            <h3 className="text-white font-Pacifico font-medium text-5xl">
-              Party's
-            </h3>
-          </div>
+const Cards = () => {
+  const cardsData = [
+    {
+      image: birthdayCake,
+      icon: cakeIcon,
+      title: "Shop Cakes",
+      bgColor: "bg-[rgba(255,231,217,0.8)]",
+    },
+    {
+      image: foodShop,
+      icon: Shop,
+      title: "Bakeshop",
+      bgColor: "bg-[rgba(255,231,217,0.8)]",
+    },
+    {
+      image: party,
+      icon: Party,
+      title: "Party Services",
+      bgColor: "bg-[rgba(255,231,217,0.8)]",
+    },
+  ];
+
+  return (
+    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen p-10 md:p-20">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-10 tracking-tight">
+          Welcome to Sweet Moments
+        </h1>
+        <p className="text-lg text-center text-gray-600 mb-16">
+          Your go-to bakeshop for delightful cakes, treats, and party services. 
+        </p>
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {cardsData.map((card, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              whileHover="hover"
+              whileTap="tap"
+              className="relative cursor-pointer group rounded-lg overflow-hidden shadow-lg bg-white"
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="object-cover w-full h-64 sm:h-72 transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                className={`absolute inset-0 flex flex-col items-center justify-center ${card.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+              >
+                <img src={card.icon} alt={`${card.title} Icon`} className="w-14 h-14 mb-4" />
+                <h3 className="text-gray-800 font-semibold text-2xl">{card.title}</h3>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
