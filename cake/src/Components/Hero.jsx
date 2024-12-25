@@ -29,7 +29,7 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative">
+    <div className="relative shadow-lg shadow-red-500">
       {/* Dynamic Background Image */}
       <motion.div
         style={{ backgroundImage: `url(${slides[currentIndex].URL})` }}
