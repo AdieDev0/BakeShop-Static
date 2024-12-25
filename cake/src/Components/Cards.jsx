@@ -3,6 +3,8 @@ import birthdayCake from "../assets/cards/BirthdayCake.jpg";
 import foodShop from "../assets/cards/foodShop.jpg";
 import party from "../assets/cards/party.jpg";
 import cakeIcon from "../assets/cards/CakeIcon.png";
+import Shop from '../assets/cards/Shop.png'
+import Party from '../assets/cards/Party.png'
 
 const Cards = () => {
   return (
@@ -29,7 +31,7 @@ const Cards = () => {
             className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
+            <img src={Shop} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Bakeshop</h3>
           </div>
         </div>
@@ -41,7 +43,7 @@ const Cards = () => {
             className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
+            <img src={Party} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Party's</h3>
           </div>
         </div>
