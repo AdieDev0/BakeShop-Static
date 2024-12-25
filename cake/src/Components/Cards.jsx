@@ -84,7 +84,7 @@ const Cards = () => {
               <div
                 className={`absolute inset-0 flex flex-col items-center justify-center ${card.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               >
-                <img src={card.icon} alt={`${card.title} Icon`} className="w-14 h-14 mb-4" />
+                <img src={card.icon} alt={`${card.title} Icon`} className="size-36 mb-4" />
                 <motion.h3
                   className="text-pink-600 font-semibold text-2xl font-Pacifico"
                   variants={textVariants}
