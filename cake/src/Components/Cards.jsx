@@ -17,7 +17,7 @@ const Cards = () => {
           />
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white">Bakeshop</h3>
+            <h3 className="text-white">Shop</h3>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ const Cards = () => {
           />
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white">Bakeshop</h3>
+            <h3 className="text-white">Party's</h3>
           </div>
         </div>
       </div>
