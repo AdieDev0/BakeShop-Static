@@ -7,6 +7,12 @@ import cakeIcon from "../assets/cards/CakeIcon.png";
 import Shop from "../assets/cards/Shop.png";
 import Party from "../assets/cards/Party.png";
 
+// Animation Variants
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const cardVariants = {
   hover: {
     scale: 1.03,
@@ -43,14 +49,24 @@ const Cards = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen p-10 md:p-20">
+    <div className="bg-gradient-to-b from-pink-50 to-white min-h-screen p-10 md:p-20 font-sans">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-10 tracking-tight">
-          Welcome to Sweet Moments
-        </h1>
-        <p className="text-lg text-center text-gray-600 mb-16">
+        <motion.h1
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-10 tracking-tight font-Josefin-Sans"
+        >
+          Welcome to <span className="font-Pacifico text-pink-500">ButterCup</span>
+        </motion.h1>
+        <motion.p
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-xl text-center text-gray-600 mb-16 font-Josefin-Sans"
+        >
           Your go-to bakeshop for delightful cakes, treats, and party services. 
-        </p>
+        </motion.p>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {cardsData.map((card, index) => (
             <motion.div
@@ -69,7 +85,14 @@ const Cards = () => {
                 className={`absolute inset-0 flex flex-col items-center justify-center ${card.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               >
                 <img src={card.icon} alt={`${card.title} Icon`} className="w-14 h-14 mb-4" />
-                <h3 className="text-gray-800 font-semibold text-2xl">{card.title}</h3>
+                <motion.h3
+                  className="text-gray-800 font-semibold text-2xl"
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  {card.title}
+                </motion.h3>
               </div>
             </motion.div>
           ))}
