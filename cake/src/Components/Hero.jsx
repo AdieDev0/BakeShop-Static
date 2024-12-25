@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import heroBg from "../assets/HeroBg.jpg";
 import { FaRegHandPointRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -32,6 +31,7 @@ const Hero = () => {
     <div className="relative shadow-lg shadow-red-500">
       {/* Dynamic Background Image */}
       <motion.div
+        key={currentIndex}
         style={{ backgroundImage: `url(${slides[currentIndex].URL})` }}
         className="relative w-full h-[350px] sm:h-[590px] bg-center bg-cover bg-no-repeat duration-500"
         initial={{ opacity: 0 }}
@@ -44,13 +44,23 @@ const Hero = () => {
 
       {/* Inside Text and Button */}
       <div className="absolute top-20 left-10 md:left-32">
-        <h1 className="w-60 md:w-96 text-6xl md:text-8xl font-Mountains-of-Christmas font-extrabold text-red-400 md:text-red-600 mb-20">
+        <motion.h1
+          className="w-60 md:w-96 text-6xl md:text-8xl font-Mountains-of-Christmas font-extrabold text-red-400 md:text-red-600 mb-20"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Christmas Celebrate!
-        </h1>
+        </motion.h1>
 
-        <button className="flex gap-4 text-xl md:text-4xl font-bold text-red-400 hover:text-white items-center px-5 md:px-10 py-3 md:py-5 bg-white hover:bg-red-400 duration-150 rounded-full">
+        <motion.button
+          className="flex gap-4 text-xl md:text-4xl font-bold text-red-400 hover:text-white items-center px-5 md:px-10 py-3 md:py-5 bg-white hover:bg-red-400 duration-150 rounded-full"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
           TAP TO ORDER <FaRegHandPointRight />
-        </button>
+        </motion.button>
       </div>
     </div>
   );
