@@ -3,8 +3,8 @@ import birthdayCake from "../assets/cards/BirthdayCake.jpg";
 import foodShop from "../assets/cards/foodShop.jpg";
 import party from "../assets/cards/party.jpg";
 import cakeIcon from "../assets/cards/CakeIcon.png";
-import Shop from '../assets/cards/Shop.png'
-import Party from '../assets/cards/Party.png'
+import Shop from "../assets/cards/Shop.png";
+import Party from "../assets/cards/Party.png";
 
 const Cards = () => {
   return (
@@ -19,8 +19,10 @@ const Cards = () => {
           />
           {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white">Shop</h3>
+            <img src={cakeIcon} alt="Cake Icon" className="size-36 mb-2" />
+            <h3 className="text-white font-Pacifico font-medium text-5xl">
+              Shop
+            </h3>
           </div>
         </div>
 
@@ -33,8 +35,10 @@ const Cards = () => {
           />
           {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={Shop} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white">Bakeshop</h3>
+            <img src={Shop} alt="Cake Icon" className="size-36 mb-2" />
+            <h3 className="text-white font-Pacifico font-medium text-5xl">
+              Bakeshop
+            </h3>
           </div>
         </div>
         {/* IMAGE 3 */}
@@ -46,8 +50,10 @@ const Cards = () => {
           />
           {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
-            <img src={Party} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white font-Pacifico font-medium text-5xl">Party's</h3>
+            <img src={Party} alt="Cake Icon" className="size-36 mb-2" />
+            <h3 className="text-white font-Pacifico font-medium text-5xl">
+              Party's
+            </h3>
           </div>
         </div>
       </div>
