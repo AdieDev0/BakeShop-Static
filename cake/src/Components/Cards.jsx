@@ -86,7 +86,7 @@ const Cards = () => {
               >
                 <img src={card.icon} alt={`${card.title} Icon`} className="w-14 h-14 mb-4" />
                 <motion.h3
-                  className="text-gray-800 font-semibold text-2xl"
+                  className="text-pink-600 font-semibold text-2xl font-Pacifico"
                   variants={textVariants}
                   initial="hidden"
                   whileInView="visible"
