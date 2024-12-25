@@ -17,6 +17,7 @@ const Cards = () => {
             alt="Birthday Cake"
             className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
+          {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={cakeIcon} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Shop</h3>
@@ -30,6 +31,7 @@ const Cards = () => {
             alt="Bake Shop"
             className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
+          {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={Shop} alt="Cake Icon" className="w-24 h-24 mb-2" />
             <h3 className="text-white">Bakeshop</h3>
@@ -40,11 +42,12 @@ const Cards = () => {
           <img
             src={party}
             alt="Party"
-            className="object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
+            className=" object-cover inset-0 w-full h-full absolute rounded-xl group-hover:opacity-40 transition-opacity duration-200"
           />
+          {/* HOVER */}
           <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-[rgba(251,168,180,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl">
             <img src={Party} alt="Cake Icon" className="w-24 h-24 mb-2" />
-            <h3 className="text-white">Party's</h3>
+            <h3 className="text-white font-Pacifico font-medium text-5xl">Party's</h3>
           </div>
         </div>
       </div>
