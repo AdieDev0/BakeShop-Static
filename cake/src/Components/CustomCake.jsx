@@ -28,7 +28,7 @@ const CustomCake = () => {
             ButterCup{" "}
             <span className="font-bold font-Josefin-Sans">Delivery</span>
           </p>
-          <h1 className="text-xl md:text-3xl italic font-bold text-red-400">
+          <h1 className=" text-lg md:text-xl font-bold text-white rounded-full bg-red-400  mx-40 py-1">
             Custom Cakes
           </h1>
           
