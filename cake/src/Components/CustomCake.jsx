@@ -18,17 +18,7 @@ const CustomCake = () => {
   return (
     <div className="bg-white w-full px-6 md:px-10 py-10">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-        {/* Cake Image */}
-        <motion.img
-          src={ChocoCake}
-          alt="Choco Cake"
-          className="w-[300px] md:w-[500px] lg:w-[800px]"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { duration: 1.2, ease: "easeOut" },
-          }}
-        />
+        
         {/* Logo and Text */}
         <motion.div
           className="text-center"
@@ -62,6 +52,17 @@ const CustomCake = () => {
             ORDER NOW!
           </motion.button>
         </motion.div>
+        {/* Cake Image */}
+        <motion.img
+          src={ChocoCake}
+          alt="Choco Cake"
+          className="w-[300px] md:w-[500px] lg:w-[800px]"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1.2, ease: "easeOut" },
+          }}
+        />
       </div>
     </div>
   );
