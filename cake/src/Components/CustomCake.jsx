@@ -29,14 +29,9 @@ const CustomCake = () => {
             <span className="font-bold font-Josefin-Sans">Delivery</span>
           </p>
           <h1 className="text-xl md:text-3xl italic font-bold text-red-400">
-            9999-5-201
+            Custom Cakes
           </h1>
-          <h1 className="text-lg md:text-2xl italic font-semibold text-red-400">
-            buttercupdelivery.ph
-          </h1>
-          <h1 className="text-xs md:text-sm italic font-bold text-red-400">
-            For Metro Manila and Rizal areas only
-          </h1>
+          
           <p className="w-full max-w-md mx-auto mt-5 font-Josefin-Sans text-black/50 font-medium">
           Celebrate every milestone with a customized cake from ButterCup
           </p>
@@ -46,7 +41,7 @@ const CustomCake = () => {
             whileHover="hover"
             whileTap="tap"
           >
-            ORDER NOW!
+            LEARN MORE!
           </motion.button>
         </motion.div>
         {/* Cake Image */}
