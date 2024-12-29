@@ -4,6 +4,7 @@ import Hero from "./Components/Hero";
 import FeatureSelection from "./Components/FeatureSelection";
 import Cards from "./Components/Cards";
 import OrderInfo from "./Components/OrderInfo";
+import CustomCake from "./Components/CustomCake";
 
 const App = () => {
   return (
@@ -11,8 +12,9 @@ const App = () => {
       <Navbar />
       <Hero />
       <FeatureSelection />
-      <Cards/>
-      <OrderInfo/>
+      <Cards />
+      <OrderInfo />
+      <CustomCake />
     </div>
   );
 };
