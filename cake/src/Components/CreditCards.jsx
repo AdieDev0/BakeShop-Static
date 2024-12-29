@@ -4,7 +4,7 @@ import Bcards from "../assets/No Background PNG/CreditCards.png";
 
 const CreditCards = () => {
   return (
-    <div className="bg-gradient-to-b from-red-400 via-white to-white p-4 md:px-16 lg:px-32 w-full h-auto">
+    <div className="bg-gradient-to-b from-red-400 via-white to-white p-4 md:px-16 lg:px-72 w-full h-auto">
       <motion.div
         className="flex flex-col md:flex-row justify-between items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -25,7 +25,7 @@ const CreditCards = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <p className="text-black font-Josefin-Sans text-xl md:text-2xl lg:text-3xl mb-4">
+          <p className="text-black font-Josefin-Sans font-medium text-xl md:text-2xl lg:text-3xl mb-4">
             Please be advised that the Credit Cards will be discontinued on
             October 31, 2024
           </p>
