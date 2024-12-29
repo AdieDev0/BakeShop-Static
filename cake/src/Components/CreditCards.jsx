@@ -5,8 +5,8 @@ const CreditCards = () => {
     <div className="bg-gradient-to-b from-red-400 via-white to-white">
       <div className="flex justify-between items-center">
         <img src={Bcards} alt="/" className="w-96" />
-        <div className="text-center">
-          <p className="text-black font-Josefin-Sans ">
+        <div className="w-96">
+          <p className="text-black font-Josefin-Sans text-3xl">
             Please be advised that the Credit Cards will be discontinued on
             October 31, 2024c
           </p>
