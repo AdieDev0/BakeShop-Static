@@ -15,7 +15,7 @@ const buttonVariants = {
 
 const CustomCake = () => {
   return (
-    <div className="bg-white w-full px-6 md:px-10 py-10">
+    <div className="bg-gradient-to-b from-white via-white to-red-400 w-full px-6 md:px-10 py-10">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Logo and Text */}
         <motion.div
