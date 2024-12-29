@@ -57,7 +57,7 @@ const Cards = () => {
           animate="visible"
           className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-10 tracking-tight font-Josefin-Sans"
         >
-          Welcome to <span className="font-Pacifico text-pink-500">ButterCup</span>
+          Welcome to <span className="font-Pacifico text-red-500">ButterCup</span>
         </motion.h1>
         <motion.p
           variants={textVariants}
