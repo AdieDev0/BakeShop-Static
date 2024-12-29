@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import cake from "../assets/Cake.png";
-import ChocoCake from "../assets/No Background PNG/ChocoCake.png";
+import ThreeCakes from "../assets/No Background PNG/ThreeCakes.png";
 
 // Animation Variants
 const fadeInVariants = {
@@ -18,7 +17,6 @@ const CustomCake = () => {
   return (
     <div className="bg-white w-full px-6 md:px-10 py-10">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-        
         {/* Logo and Text */}
         <motion.div
           className="text-center"
@@ -54,7 +52,7 @@ const CustomCake = () => {
         </motion.div>
         {/* Cake Image */}
         <motion.img
-          src={ChocoCake}
+          src={ThreeCakes}
           alt="Choco Cake"
           className="w-[300px] md:w-[500px] lg:w-[800px]"
           initial={{ opacity: 0 }}
