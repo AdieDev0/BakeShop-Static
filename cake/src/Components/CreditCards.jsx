@@ -2,7 +2,7 @@ import React from "react";
 import Bcards from "../assets/No Background PNG/CreditCards.png";
 const CreditCards = () => {
   return (
-    <div className="bg-gradient-to-b from-red-400 via-white to-white">
+    <div className="bg-gradient-to-b from-red-400 via-white to-white px-64 w-full h-auto">
       <div className="flex justify-between items-center">
         <img src={Bcards} alt="/" className="w-96" />
         <div className="w-96">
