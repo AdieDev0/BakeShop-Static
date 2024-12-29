@@ -38,8 +38,7 @@ const CustomCake = () => {
             For Metro Manila and Rizal areas only
           </h1>
           <p className="w-full max-w-md mx-auto mt-5 font-Josefin-Sans text-black/50 font-medium">
-            Order from ButterCup Delivery and have your favorite Pinoy products
-            delivered to your doorstep!
+          Celebrate every milestone with a customized cake from ButterCup
           </p>
           <motion.button
             className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white duration-200 hover:rounded-none font-semibold rounded-2xl font-Josefin-Sans px-5 text-lg md:text-xl py-2 mt-5"
@@ -54,7 +53,7 @@ const CustomCake = () => {
         <motion.img
           src={ThreeCakes}
           alt="Choco Cake"
-          className="w-[300px] md:w-[500px] lg:w-[800px]"
+          className="w-[300px] md:w-[500px] lg:w-[700px]"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
