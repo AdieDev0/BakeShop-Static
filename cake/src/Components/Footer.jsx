@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-white/50 min-h-screen">
       <div>
+        {/* unorder list */}
         <ul className="flex gap-5 items-center">
           <li className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer">
             OUR STORY
@@ -20,6 +21,8 @@ const Footer = () => {
           <FaInstagram className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer" />
           <FaFacebookSquare className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer" />
         </ul>
+
+        {/* Flag */}
       </div>
     </div>
   );
