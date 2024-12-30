@@ -24,7 +24,8 @@ const Footer = () => {
 
         {/* Flag */}
         <div>
-        <span class="ph PH-gr"></span>
+        <span class="fi fi-ph"></span>
+
         </div>
       </div>
       {/* Origin */}
