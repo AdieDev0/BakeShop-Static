@@ -6,6 +6,7 @@ import Cards from "./Components/Cards";
 import OrderInfo from "./Components/OrderInfo";
 import CustomCake from "./Components/CustomCake";
 import CreditCards from "./Components/CreditCards";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <OrderInfo />
       <CustomCake />
       <CreditCards/>
+      <Footer/>
     </div>
   );
 };
