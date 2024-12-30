@@ -23,13 +23,14 @@ const Footer = () => {
         </ul>
 
         {/* Flag */}
-        <div>
-        <span class="fi fi-ph"></span>
-
+        <div className="flex gap-2">
+          <span class="fi fi-ph"></span>
+          <span class="fi fi-us"></span>
+          <span class="fi fi-jp"></span>
         </div>
       </div>
       {/* Origin */}
-      <div className="text-center mt-14 text-red-600">
+      <div className="text-center font-Josefin-Sans mt-14 text-red-600 uppercase">
         <p>©2024 ADIE.DEV. Merry Christmas and Happy New Year!</p>
       </div>
     </div>
