@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Origin */}
-      <div className="text-center font-Josefin-Sans mt-14 text-red-600 uppercase">
+      <div className="text-center text-sm font-Josefin-Sans mt-14 text-red-600 uppercase">
         <p>©2024 ADIE.DEV. Merry Christmas and Happy New Year!</p>
       </div>
     </div>
