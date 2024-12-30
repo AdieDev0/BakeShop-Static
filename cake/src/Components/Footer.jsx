@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="bg-stone-700 px-6 py-8 md:px-16 md:py-12 lg:px-36 lg:py-16">
+    <div className="bg-gradient-to-r from-red-500 via-pink-500 to-red-500 px-6 py-8 md:px-16 md:py-12 lg:px-36 lg:py-16">
       {/* Main Content */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
         {/* Navigation Links */}
@@ -24,7 +24,7 @@ const Footer = () => {
               key={index}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="text-md text-red-600 font-semibold decoration-red-400 decoration-2 hover:underline underline-offset-4 transition duration-200 cursor-pointer"
+              className="text-md text-white font-semibold decoration-white decoration-2 hover:underline underline-offset-4 transition duration-200 cursor-pointer"
             >
               {text}
             </motion.li>
@@ -34,7 +34,7 @@ const Footer = () => {
               key={index}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="text-md text-white hover:text-red-400 transition duration-200 cursor-pointer"
+              className="text-md text-white hover:text-pink-200 transition duration-200 cursor-pointer"
             >
               <Icon />
             </motion.li>
@@ -56,7 +56,7 @@ const Footer = () => {
 
       {/* Footer Text */}
       <motion.div
-        className="text-center text-sm font-Josefin-Sans mt-8 text-red-600 uppercase"
+        className="text-center text-sm font-Josefin-Sans mt-8 text-white uppercase"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
