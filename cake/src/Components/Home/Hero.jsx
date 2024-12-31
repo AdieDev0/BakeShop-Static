@@ -6,6 +6,7 @@ import FeatureSelection from "./FeatureSelection";
 import CustomCake from "./CustomCake";
 import OrderInfo from "./OrderInfo";
 import CreditCards from "./CreditCards";
+import Footer from "../Footer";
 
 const Hero = () => {
   // IMAGE SLIDER DATA
@@ -75,6 +76,7 @@ const Hero = () => {
       <OrderInfo/>
       <CustomCake />
       <CreditCards/>
+      <Footer/>
     </>
   );
 };
