@@ -7,6 +7,7 @@ import Cards from "./Components/Home/Cards";
 import OrderInfo from "./Components/Home/OrderInfo";
 import CustomCake from "./Components/Home/CustomCake";
 import CreditCards from "./Components/Home/CreditCards";
+import Careers from "./Components/Careers/Careers";
 
 const App = () => {
   return (
@@ -15,10 +16,11 @@ const App = () => {
       <Hero />
       <FeatureSelection />
       <Cards />
-      <OrderInfo/>
+      <OrderInfo />
       <CustomCake />
-      <CreditCards/>
-      <Footer/>
+      <CreditCards />
+      <Footer />
+      <Careers />
     </div>
   );
 };
