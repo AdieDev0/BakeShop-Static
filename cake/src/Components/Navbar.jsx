@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink
 import cake from "../assets/Cake.png";
 import { BsSearchHeart } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -20,6 +21,15 @@ const Navbar = () => {
     setTimeout(() => setMenuIconTransition(false), 300); // Match the duration of the sidebar transition
   };
 
+  const navItems = [
+    { name: "MENU", path: "/menu" },
+    { name: "LOCATION", path: "/location" },
+    { name: "PROMOS", path: "/promos" },
+    { name: "FRANCHISING", path: "/franchising" },
+    { name: "CAREERS", path: "/careers" },
+    { name: "ORDER ONLINE", path: "/order-online" },
+  ];
+
   return (
     <div className="relative">
       {/* Loading Screen */}
@@ -34,29 +44,27 @@ const Navbar = () => {
       <div className="z-50 sticky bg-red-400 px-5 md:px-52 py-4 w-full shadow-lg shadow-red-500">
         <div className="flex justify-between items-center">
           {/* Logo and Bakeshop Name */}
-          <div className="flex items-center gap-3">
+          <NavLink to="/" className="flex items-center gap-3">
             <img src={cake} alt="/" className="w-12 cursor-pointer" />
             <h3 className="text-2xl text-white font-medium font-Pacifico cursor-pointer">
               ButterCup
             </h3>
-          </div>
+          </NavLink>
 
           {/* Navigation for larger screens */}
           <div className="hidden md:flex gap-5 items-center">
-            {[
-              "MENU",
-              "LOCATION",
-              "PROMOS",
-              "FRANCHISING",
-              "CAREERS",
-              "ORDER ONLINE",
-            ].map((item) => (
-              <h2
-                key={item}
-                className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer"
+            {navItems.map(({ name, path }) => (
+              <NavLink
+                key={name}
+                to={path}
+                className={({ isActive }) =>
+                  `text-md font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer ${
+                    isActive ? "text-yellow-300" : "text-white"
+                  }`
+                }
               >
-                {item}
-              </h2>
+                {name}
+              </NavLink>
             ))}
             <BsSearchHeart className="cursor-pointer text-xl text-white ml-5" />
           </div>
@@ -93,21 +101,19 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <nav className="flex-1 p-4">
-            {[
-              "MENU",
-              "LOCATION",
-              "PROMOS",
-              "FRANCHISING",
-              "CAREERS",
-              "ORDER ONLINE",
-            ].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="flex items-center py-2 px-4 rounded hover:bg-red-500 font-Josefin-Sans text-xl"
+            {navItems.map(({ name, path }) => (
+              <NavLink
+                key={name}
+                to={path}
+                className={({ isActive }) =>
+                  `flex items-center py-2 px-4 rounded hover:bg-red-500 font-Josefin-Sans text-xl ${
+                    isActive ? "bg-red-600" : ""
+                  }`
+                }
+                onClick={toggleSidebar} // Close sidebar on navigation
               >
-                {item}
-              </a>
+                {name}
+              </NavLink>
             ))}
           </nav>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaRegHandPointRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Cards from "./Cards";
 
 const Hero = () => {
   // IMAGE SLIDER DATA
@@ -28,6 +29,7 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
+    <>
     <div className="relative shadow-lg shadow-red-500">
       {/* Dynamic Background Image */}
       <motion.div
@@ -63,6 +65,10 @@ const Hero = () => {
         </motion.button>
       </div>
     </div>
+    {/* Section */}
+    
+    <Cards/>
+    </>
   );
 };
 
