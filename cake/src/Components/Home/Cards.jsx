@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import birthdayCake from "../assets/cards/BirthdayCake.jpg";
-import foodShop from "../assets/cards/foodShop.jpg";
-import party from "../assets/cards/party.jpg";
-import cakeIcon from "../assets/cards/CakeIcon.png";
-import Shop from "../assets/cards/Shop.png";
-import Party from "../assets/cards/Party.png";
+import birthdayCake from "../../assets/cards/BirthdayCake.jpg";
+import foodShop from "../../assets/cards/foodShop.jpg";
+import party from "../../assets/cards/party.jpg";
+import cakeIcon from "../../assets/cards/CakeIcon.png";
+import Shop from "../../assets/cards/Shop.png";
+import Party from "../../assets/cards/Party.png";
 
 // Animation Variants
 const textVariants = {

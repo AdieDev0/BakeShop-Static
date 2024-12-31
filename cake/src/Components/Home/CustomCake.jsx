@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ThreeCakes from "../assets/No Background PNG/ThreeCakes.png";
+import ThreeCakes from "../../assets/No Background PNG/ThreeCakes.png";
 
 // Animation Variants
 const fadeInVariants = {

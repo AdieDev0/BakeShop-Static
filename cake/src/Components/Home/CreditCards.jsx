@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Bcards from "../assets/No Background PNG/CreditCards.png";
+import Bcards from "../../assets/No Background PNG/CreditCards.png";
 
 const CreditCards = () => {
   return (
