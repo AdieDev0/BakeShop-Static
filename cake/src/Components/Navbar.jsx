@@ -43,7 +43,14 @@ const Navbar = () => {
 
           {/* Navigation for larger screens */}
           <div className="hidden md:flex gap-5 items-center">
-            {["MENU", "LOCATION", "PROMOS", "FRANCHISING", "CAREERS", "ORDER ONLINE"].map((item) => (
+            {[
+              "MENU",
+              "LOCATION",
+              "PROMOS",
+              "FRANCHISING",
+              "CAREERS",
+              "ORDER ONLINE",
+            ].map((item) => (
               <h2
                 key={item}
                 className="text-md text-white font-semibold decoration-red-200 decoration-2 hover:underline underline-offset-[30px] duration-200 transition font-Josefin-Sans cursor-pointer"
@@ -56,7 +63,9 @@ const Navbar = () => {
 
           {/* Menu Button for smaller screens */}
           <button
-            className={`md:hidden text-white text-2xl focus:outline-none transition-transform duration-300 ${menuIconTransition && "rotate-90"}`}
+            className={`md:hidden text-white text-2xl focus:outline-none transition-transform duration-300 ${
+              menuIconTransition && "rotate-90"
+            }`}
             onClick={toggleSidebar}
           >
             {isSidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -84,7 +93,14 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <nav className="flex-1 p-4">
-            {["MENU", "LOCATION", "PROMOS", "FRANCHISING", "CAREERS", "ORDER ONLINE"].map((item) => (
+            {[
+              "MENU",
+              "LOCATION",
+              "PROMOS",
+              "FRANCHISING",
+              "CAREERS",
+              "ORDER ONLINE",
+            ].map((item) => (
               <a
                 key={item}
                 href="#"
