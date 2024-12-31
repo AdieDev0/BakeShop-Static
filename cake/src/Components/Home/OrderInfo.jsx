@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import cake from "../assets/Cake.png";
-import ChocoCake from "../assets/No Background PNG/ChocoCake.png";
+import ChocoCake from "../../assets/No Background PNG/ChocoCake.png"
 
 // Animation Variants
 const fadeInVariants = {

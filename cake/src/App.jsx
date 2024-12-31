@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import FeatureSelection from "./Components/FeatureSelection";
-import Cards from "./Components/Cards";
-import OrderInfo from "./Components/OrderInfo";
-import CustomCake from "./Components/CustomCake";
-import CreditCards from "./Components/CreditCards";
 import Footer from "./Components/Footer";
+import Hero from "./Components/Home/Hero";
+import FeatureSelection from "./Components/Home/FeatureSelection";
+import Cards from "./Components/Home/Cards";
+import OrderInfo from "./Components/Home/OrderInfo";
+import CustomCake from "./Components/Home/CustomCake";
+import CreditCards from "./Components/Home/CreditCards";
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       <Hero />
       <FeatureSelection />
       <Cards />
-      <OrderInfo />
+      <OrderInfo/>
       <CustomCake />
       <CreditCards/>
       <Footer/>
