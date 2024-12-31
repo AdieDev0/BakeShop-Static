@@ -1,5 +1,7 @@
 import React from "react";
-
+import Baker from "../../assets/CareersIMG/Baker.jpg";
+import Customer from "../../assets/CareersIMG/Customer.png";
+import Girl from "../../assets/CareersIMG/Girl.jpeg";
 const Careers = () => {
   return (
     <>
