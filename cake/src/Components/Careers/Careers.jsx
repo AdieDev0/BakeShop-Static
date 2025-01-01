@@ -10,8 +10,6 @@ const textVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-
-
 const cardVariants = {
   hover: {
     scale: 1.05,
@@ -25,6 +23,7 @@ const cardVariants = {
     scale: 0.97,
   },
 };
+
 const jobListings = [
   {
     title: "RESEARCH AND DEVELOPMENT OFFICER 1",
@@ -72,8 +71,6 @@ const jobListings = [
   },
 ];
 
-
-
 const Careers = () => {
   const cardsData = [
     {
@@ -83,7 +80,8 @@ const Careers = () => {
     },
     {
       image: Customer,
-      title: "Be a part of our team and send your resume to us at: ButterCup.ph",
+      title:
+        "Be a part of our team and send your resume to us at: ButterCup.ph",
       bgColor: "bg-[rgba(255,231,217,0.8)]",
     },
     {
@@ -149,38 +147,41 @@ ButterCup Cake Plant Building
             </motion.div>
           ))}
         </div>
-      </div>
 
-
-      <div className="bg-gray-100 min-h-screen py-10 px-5 md:px-20 font-sans">
-      <div className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-5xl mx-auto shadow-lg">
-        {/* Heading */}
-        <motion.h1
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8 tracking-tight"
-        >
-          Open Positions
-        </motion.h1>
-
-        {/* Job Listings */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {jobListings.map((job, index) => (
-            <motion.div
-              key={index}
+        <div className="min-h-screen py-10 px-5 md:px-20 font-sans">
+          <div className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-5xl mx-auto shadow-lg">
+            {/* Heading */}
+            <motion.h1
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className="flex flex-col space-y-2"
+              className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8 tracking-tight"
             >
-              <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{job.description}</p>
-            </motion.div>
-          ))}
+              Open Positions
+            </motion.h1>
+
+            {/* Job Listings */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {jobListings.map((job, index) => (
+                <motion.div
+                  key={index}
+                  variants={textVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="flex flex-col space-y-2 bg-gray-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="text-xl font-bold text-gray-800">
+                    {job.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {job.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
