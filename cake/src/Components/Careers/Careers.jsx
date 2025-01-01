@@ -10,6 +10,12 @@ const textVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+// Animation Variants
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const cardVariants = {
   hover: {
     scale: 1.05,
@@ -23,6 +29,54 @@ const cardVariants = {
     scale: 0.97,
   },
 };
+const jobListings = [
+  {
+    title: "RESEARCH AND DEVELOPMENT OFFICER 1",
+    description:
+      "The Research and Development Officer conducts a thorough study to develop or improve a product and determine product specifications, production costs, and a production timeline.",
+  },
+  {
+    title: "QUALITY ASSURANCE OFFICER 1",
+    description:
+      "The Quality Assurance Officer ensures the products meet quality standards. Implements and monitors Good Manufacturing Practices, inspects facilities for compliance with standards, and reviews customer feedback.",
+  },
+  {
+    title: "ACCOUNTING CLERK",
+    description:
+      "The Accounting Clerk is responsible for providing accounting support to supervisors and managers, performing accounting and clerical functions.",
+  },
+  {
+    title: "OFFICE CLERK",
+    description: "Administrative and clerical works.",
+  },
+  {
+    title: "AUDIT OFFICER",
+    description:
+      "Responsible for planning and reviewing processes, ensuring compliance with company policies, conducting pre-implementation system reviews, and recommending improvements to enhance efficiency and reduce costs.",
+  },
+  {
+    title: "BILLING ACCOUNTANT",
+    description:
+      "The position involves timely and accurate billing of products and services, including royalties and advertising fees.",
+  },
+  {
+    title: "MARKETING OFFICER",
+    description:
+      "Develops and maintains marketing strategies to meet corporate objectives through planning and evaluating strategies.",
+  },
+  {
+    title: "ASSISTANT STORE MANAGER (M1)",
+    description:
+      "Oversees daily operations, ensures sales targets are met, and maintains outstanding customer service.",
+  },
+  {
+    title: "COST ACCOUNTANT",
+    description:
+      "Responsible for compliance with cost and inventory accounting policies, coordinating with Plant Accountants to safeguard accuracy and efficiency.",
+  },
+];
+
+
 
 const Careers = () => {
   const cardsData = [
@@ -100,6 +154,37 @@ ButterCup Cake Plant Building
           ))}
         </div>
       </div>
+
+
+      <div className="bg-gray-100 min-h-screen py-10 px-5 md:px-20 font-sans">
+      <div className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-5xl mx-auto shadow-lg">
+        {/* Heading */}
+        <motion.h1
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-8 tracking-tight"
+        >
+          Open Positions
+        </motion.h1>
+
+        {/* Job Listings */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {jobListings.map((job, index) => (
+            <motion.div
+              key={index}
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col space-y-2"
+            >
+              <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{job.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
