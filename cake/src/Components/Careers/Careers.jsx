@@ -181,7 +181,7 @@ ButterCup Cake Plant Building
             </div>
           </div>
         </div>
-
+        {/* FOOTER */}
         <footer className="footer text-base-content p-10">
           <nav>
             <h6 className="footer-title text-xl text-black">Services</h6>
