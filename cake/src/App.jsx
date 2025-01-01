@@ -9,6 +9,7 @@ import OrderInfo from "./Components/Home/OrderInfo";
 import CustomCake from "./Components/Home/CustomCake";
 import CreditCards from "./Components/Home/CreditCards";
 import Careers from "./Components/Careers/Careers";
+import Promos from "./Components/Promos/Promos";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/promos" element={<Promos />} />
       </Routes>
     </Router>
   );
