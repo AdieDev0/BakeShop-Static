@@ -16,8 +16,75 @@ const Franchise = () => {
           </p>
         </div>
         {/* image and text */}
-        <div className="text-center justify-center items-center">
-            <img src={Bakery} alt="/" className=" w-[600px] mx-auto" />
+        <div className="text-center justify-center items-center mb-16">
+          <img src={Bakery} alt="/" className=" w-[600px] mx-auto" />
+        </div>
+
+        {/* CONTENT SECTION */}
+        <div className="grid grid-cols-1 md:grid-cols-2 px-60 gap-10">
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              BRAND LEADERSHIP
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              ButterCup is a leading name in the bakery industry, offering a
+              wide array of delectable baked goods crafted with love and
+              precision. Discover why our customers keep coming back for more!
+            </p>
+          </div>
+
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              MARK OF EXCELLENCE
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              Recognized for exceptional quality and service, ButterCup has
+              earned numerous awards and accolades for its outstanding
+              contributions to the bakery industry.
+            </p>
+          </div>
+
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              SERVICE AND RELIABILITY
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              ButterCup's commitment to excellence extends beyond its products
+              to its customer service. We ensure every customer enjoys a
+              delightful experience.
+            </p>
+          </div>
+
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              EXCELLENT OPERATING SYSTEMS
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              Our comprehensive training and support systems help franchisees
+              deliver consistent quality and grow their businesses effectively.
+            </p>
+          </div>
+
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              BREAKTHROUGH CONCEPTS
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              From unique product offerings to innovative business strategies,
+              ButterCup continues to set trends in the bakery industry.
+            </p>
+          </div>
+
+          <div className="text-left">
+            <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
+              INNOVATIVE STORE DESIGNS AND LAYOUT
+            </h2>
+            <p className="text-sm text-black/70 font-Josefin-Sans">
+              Our store designs are crafted to provide a welcoming and efficient
+              experience for our customers. Join us and create an inviting space
+              for all.
+            </p>
+          </div>
         </div>
       </div>
     </div>
