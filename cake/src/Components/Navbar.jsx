@@ -25,7 +25,7 @@ const Navbar = () => {
     { name: "MENU", path: "/menu" },
     { name: "LOCATION", path: "/location" },
     { name: "PROMOS", path: "/promos" },
-    { name: "FRANCHISING", path: "/franchising" },
+    { name: "FRANCHISING", path: "/franchise" },
     { name: "CAREERS", path: "/careers" },
     { name: "ORDER ONLINE", path: "/order-online" },
   ];
