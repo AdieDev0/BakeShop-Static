@@ -21,7 +21,7 @@ const Franchise = () => {
         </div>
 
         {/* CONTENT SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 px-60 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-60 gap-10 mb-10">
           <div className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               BRAND LEADERSHIP
@@ -84,6 +84,29 @@ const Franchise = () => {
               experience for our customers. Join us and create an inviting space
               for all.
             </p>
+          </div>
+        </div>
+
+        {/* BG TEXT */}
+        <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 px-10 py-5 mb-10">
+          <p className="text-center text-white font-Josefin-Sans">
+            Little did the founders know that this "Whether you're a first-time
+            franchisee or a seasoned investor, Buttercup has several franchise
+            schemes to suit your investment needs."
+          </p>
+        </div>
+
+        {/* COLLAPSE SECTION */}
+        <div>
+          <div tabIndex={0} className="collapse bg-base-200">
+            <div className="collapse-title text-xl font-medium">
+              Focus me to see content
+            </div>
+            <div className="collapse-content">
+              <p>
+                tabindex={0} attribute is necessary to make the div focusable
+              </p>
+            </div>
           </div>
         </div>
       </div>
