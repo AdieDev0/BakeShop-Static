@@ -1,28 +1,65 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Bakery from "../../assets/Franchise/Bakery.png";
+
 const Franchise = () => {
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen py-10 px-5 md:px-20 font-sans">
-      <div className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-7xl mx-auto shadow-lg">
+      <div className="bg-white py-10 px-5 md:px-10 lg:px-20 rounded-xl max-w-7xl mx-auto shadow-lg">
         {/* TEXT BODY */}
-        <div className="text-center justify-center mx-80 mb-5">
-          <h1 className="text-black font-Josefin-Sans text-2xl font-semibold mb-5">
+        <motion.div
+          className="text-center justify-center mx-auto mb-10"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          <h1 className="text-black font-Josefin-Sans text-3xl font-bold mb-5">
             FRANCHISING
           </h1>
-          <p className="text-xs text-black/70 font-Josefin-Sans">
+          <p className="text-sm text-black/70 font-Josefin-Sans">
             BUTTERCUP traces its roots to the collaboration and complementary
             talents of the women, whose collective love for good food fueled
             what has been transformed into the global enterprise today.
           </p>
-        </div>
-        {/* image and text */}
-        <div className="text-center justify-center items-center mb-16">
-          <img src={Bakery} alt="/" className=" w-[600px] mx-auto" />
-        </div>
+        </motion.div>
+
+        {/* IMAGE AND TEXT */}
+        <motion.div
+          className="text-center justify-center items-center mb-16"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          <img
+            src={Bakery}
+            alt="Bakery"
+            className="w-[90%] sm:w-[80%] md:w-[600px] mx-auto"
+          />
+        </motion.div>
 
         {/* CONTENT SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 px-60 gap-10 mb-10">
-          <div className="text-left">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 px-5 md:px-10 lg:px-20 mb-10"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               BRAND LEADERSHIP
             </h2>
@@ -31,9 +68,9 @@ const Franchise = () => {
               wide array of delectable baked goods crafted with love and
               precision. Discover why our customers keep coming back for more!
             </p>
-          </div>
+          </motion.div>
 
-          <div className="text-left">
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               MARK OF EXCELLENCE
             </h2>
@@ -42,9 +79,9 @@ const Franchise = () => {
               earned numerous awards and accolades for its outstanding
               contributions to the bakery industry.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="text-left">
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               SERVICE AND RELIABILITY
             </h2>
@@ -53,9 +90,9 @@ const Franchise = () => {
               to its customer service. We ensure every customer enjoys a
               delightful experience.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="text-left">
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               EXCELLENT OPERATING SYSTEMS
             </h2>
@@ -63,9 +100,9 @@ const Franchise = () => {
               Our comprehensive training and support systems help franchisees
               deliver consistent quality and grow their businesses effectively.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="text-left">
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               BREAKTHROUGH CONCEPTS
             </h2>
@@ -73,9 +110,9 @@ const Franchise = () => {
               From unique product offerings to innovative business strategies,
               ButterCup continues to set trends in the bakery industry.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="text-left">
+          <motion.div variants={sectionVariants} className="text-left">
             <h2 className="text-black/60 font-Josefin-Sans text-lg font-bold mb-2">
               INNOVATIVE STORE DESIGNS AND LAYOUT
             </h2>
@@ -84,31 +121,235 @@ const Franchise = () => {
               experience for our customers. Join us and create an inviting space
               for all.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* BG TEXT */}
-        <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 px-10 py-5 mb-10">
+        <motion.div
+          className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 px-10 py-5 mb-10"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
           <p className="text-center text-white font-Josefin-Sans">
             Little did the founders know that this "Whether you're a first-time
             franchisee or a seasoned investor, Buttercup has several franchise
             schemes to suit your investment needs."
           </p>
-        </div>
+        </motion.div>
 
         {/* COLLAPSE SECTION */}
-        <div>
-          <div tabIndex={0} className="collapse bg-base-200">
-            <div className="collapse-title text-xl font-medium">
-              Focus me to see content
+        <motion.div
+          className="px-5 md:px-10 lg:px-20"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          {/* 1 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              What is the ButterCup Franchise Agreement?
             </div>
-            <div className="collapse-content">
-              <p>
-                tabindex={0} attribute is necessary to make the div focusable
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                The Franchise Agreement grants the franchisee the right to
+                operate a specific ButterCup Store, at a single address, for a
+                period of 5 years. These rights include the use of the ButterCup
+                trade name and trademarks, proprietary products, store design,
+                signage, and the use of ButterCup methods of operation. In
+                return, the franchisee agrees to operate the business in
+                accordance with ButterCup's established standards of quality,
+                service, cleanliness, and customer service. The franchisee is
+                expected to do their utmost best to operate the store to achieve
+                its fullest potential in terms of profitability and customer
+                delight.
               </p>
             </div>
           </div>
-        </div>
+          {/* 2 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              What does ButterCup look for in a prospective Franchisee?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                ButterCup looks for a franchise applicant with the following
+                characteristics:
+              </p>
+              <ul className="text-black font-Josefin-Sans">
+                <li>
+                  Highly motivated and shares the same values as ButterCup in
+                  terms of commitment to quality and service.
+                </li>
+                <li>
+                  Dedicated to running the business on a full-time basis, not as
+                  an investor but as a hands-on operator (owner/manager).
+                </li>
+                <li>
+                  Financially capable of meeting the financial requirements.
+                </li>
+                <li>
+                  With an entrepreneurial drive, willing to take calculated
+                  risks, and with a strong desire to succeed.
+                </li>
+                <li>
+                  With business management skills, preferably with food or
+                  retail experience.
+                </li>
+                <li>Very good interpersonal relationship skills.</li>
+                <li>Willing to operate within the ButterCup system.</li>
+              </ul>
+            </div>
+          </div>
+          {/* 3 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              How much is the franchise fee?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                The franchise fee, which is paid upon the signing of the
+                franchise agreement, is for the right to use ButterCup's
+                trademark and business system as well as for the pre-opening
+                activities at the start of the franchise agreement, such as site
+                evaluation, assistance in recruitment, and training for the
+                initial store team. Franchise fee for the bakeshop is P250,000.
+                (Exclusive of VAT)
+              </p>
+            </div>
+          </div>
+
+          {/* 4 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              Does ButterCup provide financing?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                No, ButterCup does not provide financing.
+              </p>
+            </div>
+          </div>
+          {/* 5 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              How long is the Franchise Term?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                The Franchise term is for five (5) years.
+              </p>
+            </div>
+          </div>
+          {/* 6 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              How much is the Advertising Fee?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                The advertising fee is 3 % of the total sales derived from both
+                bakeshop and foodshop items and is paid on a monthly basis.
+              </p>
+            </div>
+          </div>
+          {/* 7 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              Will ButterCup provide the manpower to operate the store?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                ButterCup team will assist the franchise in the recruitment of
+                its personnel in terms of screening and testing free of charge
+                for the initial store team but recruitment cost will be charged
+                for succeeding hires. Transportation, lodging cost and out of
+                pocket expenses incurred for localized hiring outside Metro
+                Manila will be charged to the franchisee. The store personnel
+                will be directly hired by the franchisee and will be responsible
+                for their salaries and benefits.
+              </p>
+            </div>
+          </div>
+          {/* 8 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              Who looks for the location?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                When you apply for the ButterCup franchise, you may propose a
+                site location, together with an initial market study of the
+                proposed site, which will include the foot and vehicular count,
+                and demographics (area profile). Our Business Development
+                Department will assess the site and validate the market study.
+              </p>
+            </div>
+          </div>
+          {/* 9 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              What are the required sizes of the store space?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                For the Bakeshop – Minimum of 29-60sqm
+              </p>
+            </div>
+          </div>
+          {/* 10 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              Is there a standard store design?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                Yes, there is a standard ButterCup store design, lay out,
+                equipment and facilities requirements for each type of store.
+              </p>
+            </div>
+          </div>
+          {/* 11 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              What continuing support will I receive?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                On going support includes regular in – store visits to help you
+                identify areas of improvement, assistance in the development of
+                marketing and customer relations programs and activities, new
+                operating procedures, and much more.
+              </p>
+            </div>
+          </div>
+          {/* 12 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              What will my return in investment be?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                Although the brand name of ButterCup is a strong sales inducing
+                factor, the amount of revenue a franchisee can expect to make
+                will greatly depend on the ability of the franchisee to manage
+                the business, drive sales volume, and control operating costs.
+              </p>
+            </div>
+          </div>
+          {/* 13 */}
+          <div tabIndex={0} className="collapse">
+            <div className="collapse-title text-xl font-medium text-black border-b-2 border-red-400">
+              Is there territorial or area exclusivity?
+            </div>
+            <div className="collapse-content bg-pink-300 items-center">
+              <p className="text-black font-Josefin-Sans">
+                ButterCup does not grant territorial exclusivity. Stores may be
+                situated depending on market and customer needs.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
