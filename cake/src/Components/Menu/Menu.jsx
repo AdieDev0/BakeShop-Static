@@ -1,57 +1,81 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ChocoTruff from "../../assets/Menu/Chocolate truffle.png";
+import BirthdayCake from "../../assets/Menu/BirthdayCake.png";
+import TorteWedding from "../../assets/Menu/TorteWedding.png";
+import FrostingCake from "../../assets/Menu/FrostingCake.png";
+import CakeTart from "../../assets/Menu/CakeTart.png";
+import CreamChocoCake from "../../assets/Menu/CreamChocolateCake.png";
+import GermanCake from "../../assets/Menu/GermanCake.png";
+import IceCreamCake from "../../assets/Menu/IceCreamCake.png";
+
+const cakes = [
+  { id: 1, name: "Chocolate Truffle", image: ChocoTruff },
+  { id: 2, name: "Birthday Cake Cupcake", image: BirthdayCake },
+  { id: 3, name: "Torte Wedding Cake", image: TorteWedding },
+  { id: 4, name: "Frosting & Icing Wedding Cake", image: FrostingCake },
+  { id: 5, name: "Chocolate cake Birthday cake Tart", image: CakeTart },
+  {
+    id: 6,
+    name: "Cream Chocolate cake Bakery Birthday cake",
+    image: CreamChocoCake,
+  },
+  {
+    id: 7,
+    name: "German chocolate cake Fruitcake Layer cake Torte",
+    image: GermanCake,
+  },
+  {
+    id: 8,
+    name: "Ice cream Chocolate cake Chocolate brownie",
+    image: IceCreamCake,
+  },
+];
+
 const Menu = () => {
   return (
     <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen py-10 px-5 md:px-20 font-sans">
       <div className="bg-white py-10 px-5 md:px-10 lg:px-20 rounded-xl max-w-7xl mx-auto shadow-lg">
         {/* SEARCH */}
-        <input
-          type="search"
-          placeholder="Search"
-          className="bg-white border-2 border-red-300 text-black/80 font-Josefin-Sans font-medium rounded-lg py-1 px-2 "
-        />
+        <div className="mb-10">
+          <input
+            type="search"
+            placeholder="Search"
+            className="w-full md:w-auto bg-white border-2 border-red-300 text-black/80 font-Josefin-Sans font-medium rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-400"
+          />
+        </div>
+
         {/* CAKE SECTION */}
         <div className="text-center">
-          <h1 className="font-Josefin-Sans font-semibold text-2xl text-black mb-2">
+          <h1 className="font-Josefin-Sans font-semibold text-2xl md:text-3xl text-black mb-4">
             GREETING CAKES
           </h1>
           <p className="text-black/70 font-Josefin-Sans font-medium mb-10">
-            Disclaimer: For availble products visit your nearest branch or {""}
+            Disclaimer: For available products visit your nearest branch or{" "}
             <span className="underline italic text-red-400 cursor-pointer">
               ButterCup.ph
             </span>
           </p>
 
           {/* CAKE IMAGE */}
-          <div className="flex justify-between">
-            <div>
-              <img
-                src={ChocoTruff}
-                alt=""
-                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
-              />
-            </div>
-            <div>
-              <img
-                src={ChocoTruff}
-                alt=""
-                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
-              />
-            </div>
-            <div>
-              <img
-                src={ChocoTruff}
-                alt=""
-                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
-              />
-            </div>
-            <div>
-              <img
-                src={ChocoTruff}
-                alt=""
-                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
-              />
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {cakes.map((cake) => (
+              <motion.div
+                key={cake.id}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white p-5 rounded-lg shadow-md hover:shadow-lg border-4 border-red-400 cursor-pointer"
+              >
+                <img
+                  src={cake.image}
+                  alt={cake.name}
+                  className="w-full h-64 object-cover rounded-md"
+                />
+                <p className="mt-2 text-black font-Josefin-Sans font-medium">
+                  {cake.name}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
