@@ -2,6 +2,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
+
 // DATA IMAGE
 import Triple from "../../assets/Order Online/TripleChoco.jpg";
 import Cake from "../../assets/Order Online/R.jpg";
@@ -13,25 +14,37 @@ import shanghai from "../../assets/Order Online/shanghai.jpg";
 import icedCoffee from "../../assets/Order Online/icedCoffee.jpg";
 import Mocha from "../../assets/Order Online/Mocha.jpg";
 import Cream from "../../assets/Order Online/Cream.jpg";
+
 const OrderOnline = () => {
   return (
     <div>
-      <Marquee autoFill>
-        <div className="flex relative">
-          <img src={Cake} alt="/" className="w-80" />
-          <img src={icedCoffee} alt="/" className="w-80" />
-          <img src={sisig} alt="/" className="w-80" />
-          <img src={Cherry} alt="/" className="w-80" />
-          <img src={Mocha} alt="/" className="w-80" />
-          <img src={fiesta} alt="/" className="w-80" />
-          <img src={Triple} alt="/" className="w-80" />
-          <img src={shanghai} alt="/" className="w-80" />
-          <img src={Cream} alt="/" className="w-80" />
-          <img src={DarkChoco} alt="/" className="w-80" />
-          {/* BACKGROUND COLOR */}
+      {/* Marquee Section */}
+      <div className="relative">
+        {/* Moving Images */}
+        <Marquee autoFill speed={50} gradient={false}>
+          <div className="flex">
+            <img src={Cake} alt="Cake" className="w-80" />
+            <img src={icedCoffee} alt="Iced Coffee" className="w-80" />
+            <img src={sisig} alt="Sisig" className="w-80" />
+            <img src={Cherry} alt="Cherry" className="w-80" />
+            <img src={Mocha} alt="Mocha" className="w-80" />
+            <img src={fiesta} alt="Fiesta" className="w-80" />
+            <img src={Triple} alt="Triple Chocolate" className="w-80" />
+            <img src={shanghai} alt="Shanghai" className="w-80" />
+            <img src={Cream} alt="Cream" className="w-80" />
+            <img src={DarkChoco} alt="Dark Chocolate" className="w-80" />
+          </div>
+          {/* Background Overlay */}
           <div className="bg-black/40 absolute inset-0"></div>
+        </Marquee>
+
+        {/* Static Text Inside Marquee */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <h2 className="w-60 md:w-96 text-6xl md:text-8xl font-Mountains-of-Christmas font-extrabold text-red-400 md:text-red-600 mb-20">
+            Order Your Favorites Now!
+          </h2>
         </div>
-      </Marquee>
+      </div>
     </div>
   );
 };
