@@ -1,5 +1,5 @@
 import React from "react";
-
+import ChocoTruff from "../../assets/Menu/Chocolate truffle.png";
 const Menu = () => {
   return (
     <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen py-10 px-5 md:px-20 font-sans">
@@ -15,13 +15,44 @@ const Menu = () => {
           <h1 className="font-Josefin-Sans font-semibold text-2xl text-black mb-2">
             GREETING CAKES
           </h1>
-          <p className="text-black/70 font-Josefin-Sans font-medium">
+          <p className="text-black/70 font-Josefin-Sans font-medium mb-10">
             Disclaimer: For availble products visit your nearest branch or {""}
-            <span className="underline italic text-red-400 cursor-pointer">ButterCup.ph</span>
+            <span className="underline italic text-red-400 cursor-pointer">
+              ButterCup.ph
+            </span>
           </p>
 
-
           {/* CAKE IMAGE */}
+          <div className="flex justify-between">
+            <div>
+              <img
+                src={ChocoTruff}
+                alt=""
+                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
+              />
+            </div>
+            <div>
+              <img
+                src={ChocoTruff}
+                alt=""
+                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
+              />
+            </div>
+            <div>
+              <img
+                src={ChocoTruff}
+                alt=""
+                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
+              />
+            </div>
+            <div>
+              <img
+                src={ChocoTruff}
+                alt=""
+                className="w-64 border-4 border-red-400 rounded-md cursor-pointer p-5 relative hover:bg-pink-200 duration-300"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
