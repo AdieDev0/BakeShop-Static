@@ -39,8 +39,8 @@ const OrderOnline = () => {
         </Marquee>
 
         {/* Static Text Inside Marquee */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h2 className="w-60 md:w-96 text-6xl md:text-8xl font-Mountains-of-Christmas font-extrabold text-red-400 md:text-red-600 mb-20">
+        <div className="absolute inset-0 flex items-center left-16 z-10">
+          <h2 className="w-60 md:w-[700px] text-6xl md:text-8xl font-Pacifico font-extrabold bg-clip-text text-transparent bg-gradient-to-bl from-red-600 via-white to-pink-600 mb-20">
             Order Your Favorites Now!
           </h2>
         </div>
