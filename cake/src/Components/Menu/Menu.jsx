@@ -19,6 +19,9 @@ const Menu = () => {
             Disclaimer: For availble products visit your nearest branch or {""}
             <span className="underline italic text-red-400 cursor-pointer">ButterCup.ph</span>
           </p>
+
+
+          {/* CAKE IMAGE */}
         </div>
       </div>
     </div>
