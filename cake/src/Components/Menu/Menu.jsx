@@ -4,7 +4,11 @@ const Menu = () => {
   return (
     <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen py-10 px-5 md:px-20 font-sans">
       <div className="bg-white py-10 px-5 md:px-10 lg:px-20 rounded-xl max-w-7xl mx-auto shadow-lg">
-        
+        <input
+          type="search"
+          placeholder="Search"
+          className="bg-white border-2 border-red-300 text-black/80 font-Josefin-Sans font-medium rounded-lg py-1 px-2"
+        />
       </div>
     </div>
   );
