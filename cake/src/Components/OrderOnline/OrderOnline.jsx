@@ -17,7 +17,7 @@ import Cream from "../../assets/Order Online/Cream.jpg";
 
 const OrderOnline = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen font-sans">
       {/* Marquee Section */}
       <div className="relative">
         {/* Moving Images */}
@@ -51,6 +51,11 @@ const OrderOnline = () => {
       </div>
 
       {/* MINI CARDS */}
+      <div className="py-10 px-5 md:px-20">
+          <div>
+            
+          </div>
+      </div>
     </div>
   );
 };
