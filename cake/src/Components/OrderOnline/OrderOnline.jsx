@@ -39,12 +39,18 @@ const OrderOnline = () => {
         </Marquee>
 
         {/* Static Text Inside Marquee */}
-        <div className="absolute inset-0 flex items-center left-16 z-10">
+        <div className="absolute inset-0  top-10 items-center left-16 z-10">
           <h2 className="w-60 md:w-[700px] text-6xl md:text-8xl font-Pacifico font-extrabold bg-clip-text text-transparent bg-gradient-to-bl from-red-600 via-white to-pink-600 mb-20">
             Order Your Favorites Now!
           </h2>
+
+          <button className="flex gap-4 text-xl md:text-4xl font-bold text-red-400 hover:text-white items-center px-5 md:px-10 py-3 md:py-5 bg-white hover:bg-red-400 duration-150 rounded-full">
+            TAP TO ORDER
+          </button>
         </div>
       </div>
+
+      {/* MINI CARDS */}
     </div>
   );
 };
