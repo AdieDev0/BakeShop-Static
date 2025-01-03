@@ -67,7 +67,7 @@ const Cards = () => {
         >
           Your go-to bakeshop for delightful cakes, treats, and party services. 
         </motion.p>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <dinv className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {cardsData.map((card, index) => (
             <motion.div
               key={index}
@@ -96,7 +96,7 @@ const Cards = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </dinv>
       </div>
     </div>
   );
