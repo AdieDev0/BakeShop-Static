@@ -114,72 +114,73 @@ const OrderOnline = () => {
       </div>
 
       {/* Greeting Cakes Section */}
-      <div className="py-10 px-6 sm:px-16 md:px-32">
-        <div className="flex justify-between mb-10">
-          <h1 className="text-black text-3xl font-extrabold">Greeting Cakes</h1>
-          <motion.button
-            className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-200 font-extrabold px-10 py-4 rounded-full"
+      <div className="py-16 px-6 sm:px-16 md:px-32">
+      {/* Header Section */}
+      <div className="flex justify-between items-center mb-12">
+        <h1 className="text-black text-4xl font-extrabold">Greeting Cakes</h1>
+        <motion.button
+          className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-200 font-extrabold px-8 py-3 rounded-full"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          See More
+        </motion.button>
+      </div>
+
+      {/* Cake Selection */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {[
+          { name: "Candle Cake", img: candleCake },
+          { name: "Cheery Choco", img: cheeryChoco },
+          { name: "Choco Truffle", img: ChocoTruffle },
+          { name: "Custard Sponge", img: CustardSponge },
+          { name: "Dripping Cake", img: DrippingCake },
+          { name: "Ice Cream Cake", img: IceCreamCake },
+          { name: "Pastry Moon Cake", img: PastryMoonCake },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="border-2 border-red-600 bg-red-500 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            See More
-          </motion.button>
-        </div>
-
-        {/* Cake Selection */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {[
-            { name: "Candle Cake", img: candleCake },
-            { name: "Cheery Choco", img: cheeryChoco },
-            { name: "Choco Truffle", img: ChocoTruffle },
-            { name: "Custard Sponge", img: CustardSponge },
-            { name: "Dripping Cake", img: DrippingCake },
-            { name: "Ice Cream Cake", img: IceCreamCake },
-            { name: "Pastry Moon Cake", img: PastryMoonCake },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              className="border-2 border-red-600 bg-red-500 rounded-xl p-3"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <img
-                src={item.img}
-                alt={item.name}
-                className="w-32 sm:w-28 md:w-20 lg:w-24 mx-auto mb-4"
-              />
-              <h2 className="font-extrabold text-white text-xs mb-3 text-center">
-                {item.name}
-              </h2>
-              <div className="flex justify-between">
-                {/* Counter with buttons */}
-                <div className="flex items-center justify-center gap-2">
-                  <button
-                    className="text-2xl text-white hover:text-gray-300"
-                    onClick={handleDecrement}
-                  >
-                    <CiCircleMinus />
-                  </button>
-                  <h1 className="text-white font-bold text-lg">{value}</h1>
-                  <button
-                    className="text-2xl text-white hover:text-gray-300"
-                    onClick={handleIncrement}
-                  >
-                    <IoIosAddCircleOutline />
-                  </button>
-                </div>
-                <motion.button
-                  className="mt-3 px-4 py-2 bg-white text-red-500 font-bold rounded-md hover:bg-gray-200"
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-32 sm:w-28 md:w-20 lg:w-32 xl:w-40 mx-auto mb-4"
+            />
+            <h2 className="font-extrabold text-white text-xs mb-3 text-center">
+              {item.name}
+            </h2>
+            <div className="flex justify-center items-center gap-4">
+              {/* Counter with buttons */}
+              <div className="flex items-center gap-3">
+                <button
+                  className="text-2xl text-white hover:text-gray-300"
+                  onClick={handleDecrement}
                 >
-                  Add to tray
-                </motion.button>
+                  <CiCircleMinus />
+                </button>
+                <h1 className="text-white font-bold text-lg">{value}</h1>
+                <button
+                  className="text-2xl text-white hover:text-gray-300"
+                  onClick={handleIncrement}
+                >
+                  <IoIosAddCircleOutline />
+                </button>
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <motion.button
+                className="mt-3 px-6 py-3 bg-white text-red-500 font-bold rounded-md hover:bg-gray-200"
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                Add to tray
+              </motion.button>
+            </div>
+          </motion.div>
+        ))}
       </div>
+    </div>
     </div>
   );
 };
