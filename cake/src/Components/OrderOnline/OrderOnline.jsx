@@ -60,8 +60,8 @@ const OrderOnline = () => {
       </div>
 
       {/* MINI CARDS */}
-      <div className="py-10 px-5">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+     <div className="py-10 px-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5">
           {[
             { name: "Greeting Cakes", img: cake },
             { name: "Premium Cakes", img: goldCake },
@@ -82,7 +82,7 @@ const OrderOnline = () => {
               className="border-4 bg-red-500 border-red-500 rounded-xl p-4 flex flex-col items-center cursor-pointer"
             >
               <h2 className="font-extrabold text-white text-lg mb-3">{item.name}</h2>
-              <img src={item.img} alt={item.name} className="w-32 md:w-52" />
+              <img src={item.img} alt={item.name} className="w-32 md:w-28" />
             </motion.div>
           ))}
         </div>
