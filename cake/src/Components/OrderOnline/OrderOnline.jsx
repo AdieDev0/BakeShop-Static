@@ -24,6 +24,15 @@ import icedCoffee from "../../assets/Order Online/icedCoffee.jpg";
 import Mocha from "../../assets/Order Online/Mocha.jpg";
 import Cream from "../../assets/Order Online/Cream.jpg";
 
+// GREETING SELECTIONS
+import candleCake from "../../assets/GreetingSelections/CandleCake.png";
+import cheeryChoco from "../../assets/GreetingSelections/CherryChoco.jpg";
+import ChocoTruffle from "../../assets/GreetingSelections/Chocolate truffle.png";
+import CustardSponge from "../../assets/GreetingSelections/CustardSpongeCake.png";
+import DrippingCake from "../../assets/GreetingSelections/DrippingCake.png";
+import IceCreamCake from "../../assets/GreetingSelections/IceCreamCake.png";
+import PastryMoonCake from "../../assets/GreetingSelections/PastryMoonCake.png";
+
 const OrderOnline = () => {
   return (
     <div className="bg-white/80 min-h-screen font-sans">
@@ -101,7 +110,11 @@ const OrderOnline = () => {
 
         {/* SELECTION */}
         <div>
-          
+          {[
+            {
+              name: "candleCake", img: candleCake
+            },
+          ]}
         </div>
       </div>
     </div>
