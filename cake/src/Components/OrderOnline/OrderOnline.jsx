@@ -110,12 +110,42 @@ const OrderOnline = () => {
 
         {/* SELECTION */}
         <div>
-          {[
-            {
-              name: "candleCake", img: candleCake
-            },
-          ]}
-        </div>
+  {[
+    {
+      name: "candleCake",
+      img: candleCake,
+    },
+    {
+      name: "cheeryChoco",
+      img: cheeryChoco,
+    },
+    {
+      name: "ChocoTruffle",
+      img: ChocoTruffle,
+    },
+    {
+      name: "CustardSponge",
+      img: CustardSponge,
+    },
+    {
+      name: "DrippingCake",
+      img: DrippingCake,
+    },
+    {
+      name: "IceCreamCake",
+      img: IceCreamCake,
+    },
+    {
+      name: "PastryMoonCake",
+      img: PastryMoonCake,
+    },
+  ].map((item, index) => (
+    <div key={index} className="mb-4">
+      <h2 className="font-extrabold text-white text-xs mb-3">{item.name}</h2>
+      <img src={item.img} alt={item.name} className="w-32 md:w-20" />
+    </div>
+  ))}
+</div>
       </div>
     </div>
   );
