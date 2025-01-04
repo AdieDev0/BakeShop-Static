@@ -34,6 +34,10 @@ import IceCreamCake from "../../assets/GreetingSelections/IceCreamCake.png";
 import PastryMoonCake from "../../assets/GreetingSelections/PastryMoonCake.png";
 
 const OrderOnline = () => {
+
+  // NUMBER STEPPER FOR ITEMS CAKE
+
+
   return (
     <div className="bg-white/80 min-h-screen font-sans">
       {/* Marquee Section */}
@@ -101,7 +105,7 @@ const OrderOnline = () => {
 
       {/* GREETING CAKES SELECTIONS */}
       <div className="py-10 px-32">
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-10">
           <h1 className="text-black text-3xl font-extrabold">Greeting Cakes</h1>
           <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-200 font-extrabold px-10 py-4 rounded-full">
             See More
@@ -109,43 +113,55 @@ const OrderOnline = () => {
         </div>
 
         {/* SELECTION */}
-        <div>
-  {[
-    {
-      name: "candleCake",
-      img: candleCake,
-    },
-    {
-      name: "cheeryChoco",
-      img: cheeryChoco,
-    },
-    {
-      name: "ChocoTruffle",
-      img: ChocoTruffle,
-    },
-    {
-      name: "CustardSponge",
-      img: CustardSponge,
-    },
-    {
-      name: "DrippingCake",
-      img: DrippingCake,
-    },
-    {
-      name: "IceCreamCake",
-      img: IceCreamCake,
-    },
-    {
-      name: "PastryMoonCake",
-      img: PastryMoonCake,
-    },
-  ].map((item, index) => (
-    <div key={index} className="mb-4">
-      <h2 className="font-extrabold text-white text-xs mb-3">{item.name}</h2>
-      <img src={item.img} alt={item.name} className="w-32 md:w-20" />
-    </div>
-  ))}
-</div>
+        <div className="flex justify-between">
+          {[
+            {
+              name: "candleCake",
+              img: candleCake,
+            },
+            {
+              name: "cheeryChoco",
+              img: cheeryChoco,
+            },
+            {
+              name: "ChocoTruffle",
+              img: ChocoTruffle,
+            },
+            {
+              name: "CustardSponge",
+              img: CustardSponge,
+            },
+            {
+              name: "DrippingCake",
+              img: DrippingCake,
+            },
+            {
+              name: "IceCreamCake",
+              img: IceCreamCake,
+            },
+            {
+              name: "PastryMoonCake",
+              img: PastryMoonCake,
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className=" border-2 border-red-600 bg-red-500 rounded-xl p-3"
+            >
+              <img src={item.img} alt={item.name} className="w-32 md:w-20" />
+              <h2 className="font-extrabold text-white text-xs mb-3">
+                {item.name}
+              </h2>
+              <div>
+                {/* COUNTER */}
+                <div>
+
+                </div>
+                <button>Add to tray</button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
