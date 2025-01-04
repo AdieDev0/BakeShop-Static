@@ -2,6 +2,15 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
+import cake from "../../assets/Order Online/miniCards/cake.png";
+import desserts from "../../assets/Order Online/miniCards/desserts.png";
+import goldCake from "../../assets/Order Online/miniCards/goldCake.png";
+import inasal from "../../assets/Order Online/miniCards/inasal.png";
+import kakanin from "../../assets/Order Online/miniCards/kakanin.png";
+import merienda from "../../assets/Order Online/miniCards/merienda.png";
+import pinoyMeals from "../../assets/Order Online/miniCards/pinoy meals.png";
+import redCake from "../../assets/Order Online/miniCards/red cake.png";
+import cakeRolls from "../../assets/Order Online/miniCards/cakeRolls.png";
 
 // DATA IMAGE
 import Triple from "../../assets/Order Online/TripleChoco.jpg";
@@ -17,7 +26,7 @@ import Cream from "../../assets/Order Online/Cream.jpg";
 
 const OrderOnline = () => {
   return (
-    <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen font-sans">
+    <div className="bg-white/80 min-h-screen font-sans">
       {/* Marquee Section */}
       <div className="relative">
         {/* Moving Images */}
@@ -51,10 +60,65 @@ const OrderOnline = () => {
       </div>
 
       {/* MINI CARDS */}
-      <div className="py-10 px-5 md:px-20">
-          <div>
-            
+      <div className="py-10 px-5 md:px- ">
+        <div className="justify-between flex">
+          {/* GREETING CAKES */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-20 px-3">
+              Greeting Cakes
+            </h2>
+            <img src={cake} alt="" className="w-52" />
           </div>
+          {/* PREMIUM CAKES */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-20 px-3">
+              Premium Cakes
+            </h2>
+            <img src={goldCake} alt="" className="w-52" />
+          </div>
+          {/* CAKE ROLLS */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Cake Rolls
+            </h2>
+            <img src={cakeRolls} alt="" className="w-52" />
+          </div>
+          {/* SNACKS & PASALUBONG */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Pinoy Meals
+            </h2>
+            <img src={pinoyMeals} alt="" className="w-52" />
+          </div>
+          {/* BUNDLE PINOY MEALS */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Bundle Pinoy Meals
+            </h2>
+            <img src={inasal} alt="" className="w-52" />
+          </div>
+          {/* SNACKS & PASALUBONG */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Snacks & Pasalubong
+            </h2>
+            <img src={kakanin} alt="" className="w-52" />
+          </div>
+          {/* ANYTIME MERIENDA */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Anytime Merienda
+            </h2>
+            <img src={merienda} alt="" className="w-52" />
+          </div>
+          {/* DRINKS AND DESSERTS */}
+          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
+            <h2 className="font-extrabold text-white text-lg w-36 px-3">
+              Drinks & Desserts
+            </h2>
+            <img src={desserts} alt="" className="w-52" />
+          </div>
+        </div>
       </div>
     </div>
   );
