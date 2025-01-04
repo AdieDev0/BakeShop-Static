@@ -60,64 +60,31 @@ const OrderOnline = () => {
       </div>
 
       {/* MINI CARDS */}
-      <div className="py-10 px-5 md:px- ">
-        <div className="justify-between flex">
-          {/* GREETING CAKES */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-20 px-3">
-              Greeting Cakes
-            </h2>
-            <img src={cake} alt="" className="w-52" />
-          </div>
-          {/* PREMIUM CAKES */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-20 px-3">
-              Premium Cakes
-            </h2>
-            <img src={goldCake} alt="" className="w-52" />
-          </div>
-          {/* CAKE ROLLS */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Cake Rolls
-            </h2>
-            <img src={cakeRolls} alt="" className="w-52" />
-          </div>
-          {/* SNACKS & PASALUBONG */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Pinoy Meals
-            </h2>
-            <img src={pinoyMeals} alt="" className="w-52" />
-          </div>
-          {/* BUNDLE PINOY MEALS */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Bundle Pinoy Meals
-            </h2>
-            <img src={inasal} alt="" className="w-52" />
-          </div>
-          {/* SNACKS & PASALUBONG */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Snacks & Pasalubong
-            </h2>
-            <img src={kakanin} alt="" className="w-52" />
-          </div>
-          {/* ANYTIME MERIENDA */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Anytime Merienda
-            </h2>
-            <img src={merienda} alt="" className="w-52" />
-          </div>
-          {/* DRINKS AND DESSERTS */}
-          <div className="border-4 bg-red-500 border-red-500 rounded-xl size-40 items-center cursor-pointer">
-            <h2 className="font-extrabold text-white text-lg w-36 px-3">
-              Drinks & Desserts
-            </h2>
-            <img src={desserts} alt="" className="w-52" />
-          </div>
+      <div className="py-10 px-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+          {[
+            { name: "Greeting Cakes", img: cake },
+            { name: "Premium Cakes", img: goldCake },
+            { name: "Cake Rolls", img: cakeRolls },
+            { name: "Pinoy Meals", img: pinoyMeals },
+            { name: "Bundle Pinoy Meals", img: inasal },
+            { name: "Snacks & Pasalubong", img: kakanin },
+            { name: "Anytime Merienda", img: merienda },
+            { name: "Drinks & Desserts", img: desserts },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="border-4 bg-red-500 border-red-500 rounded-xl p-4 flex flex-col items-center cursor-pointer"
+            >
+              <h2 className="font-extrabold text-white text-lg mb-3">{item.name}</h2>
+              <img src={item.img} alt={item.name} className="w-32 md:w-52" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
