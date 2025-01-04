@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
+import { CiCircleMinus } from "react-icons/ci";
+import { IoIosAddCircleOutline } from "react-icons/io";
+
+// Importing assets
 import cake from "../../assets/Order Online/miniCards/cake.png";
 import desserts from "../../assets/Order Online/miniCards/desserts.png";
 import goldCake from "../../assets/Order Online/miniCards/goldCake.png";
@@ -12,7 +16,6 @@ import pinoyMeals from "../../assets/Order Online/miniCards/pinoy meals.png";
 import redCake from "../../assets/Order Online/miniCards/red cake.png";
 import cakeRolls from "../../assets/Order Online/miniCards/cakeRolls.png";
 
-// DATA IMAGE
 import Triple from "../../assets/Order Online/TripleChoco.jpg";
 import Cake from "../../assets/Order Online/R.jpg";
 import Cherry from "../../assets/Order Online/cherry.jpg";
@@ -24,7 +27,6 @@ import icedCoffee from "../../assets/Order Online/icedCoffee.jpg";
 import Mocha from "../../assets/Order Online/Mocha.jpg";
 import Cream from "../../assets/Order Online/Cream.jpg";
 
-// GREETING SELECTIONS
 import candleCake from "../../assets/GreetingSelections/CandleCake.png";
 import cheeryChoco from "../../assets/GreetingSelections/CherryChoco.jpg";
 import ChocoTruffle from "../../assets/GreetingSelections/Chocolate truffle.png";
@@ -34,16 +36,27 @@ import IceCreamCake from "../../assets/GreetingSelections/IceCreamCake.png";
 import PastryMoonCake from "../../assets/GreetingSelections/PastryMoonCake.png";
 
 const OrderOnline = () => {
+  // State for the number stepper
+  const [value, setValue] = useState(1);
 
-  // NUMBER STEPPER FOR ITEMS CAKE
+  // Increment handler
+  const handleIncrement = () => {
+    setValue(value + 1);
+  };
 
+  // Decrement handler
+  const handleDecrement = () => {
+    if (value > 1) {
+      setValue(value - 1);
+    }
+  };
 
   return (
     <div className="bg-white/80 min-h-screen font-sans">
       {/* Marquee Section */}
       <div className="relative">
-        {/* Moving Images */}
         <Marquee autoFill speed={50} gradient={false}>
+          {/* Display scrolling images */}
           <div className="flex">
             <img src={Cake} alt="Cake" className="w-80" />
             <img src={icedCoffee} alt="Iced Coffee" className="w-80" />
@@ -56,23 +69,20 @@ const OrderOnline = () => {
             <img src={Cream} alt="Cream" className="w-80" />
             <img src={DarkChoco} alt="Dark Chocolate" className="w-80" />
           </div>
-          {/* Background Overlay */}
-          <div className="bg-black/40 absolute inset-0"></div>
         </Marquee>
 
-        {/* Static Text Inside Marquee */}
-        <div className="absolute inset-0  top-10 items-center left-16 z-10">
+        {/* Overlay content */}
+        <div className="absolute inset-0 top-10 items-center left-16 z-10">
           <h2 className="w-60 md:w-[700px] text-6xl md:text-8xl font-Pacifico font-extrabold bg-clip-text text-transparent bg-gradient-to-bl from-red-600 via-white to-pink-600 mb-20">
             Order Your Favorites Now!
           </h2>
-
           <button className="flex gap-4 text-xl md:text-4xl font-bold text-red-400 hover:text-white items-center px-5 md:px-10 py-3 md:py-5 bg-white hover:bg-red-400 duration-150 rounded-full">
             TAP TO ORDER
           </button>
         </div>
       </div>
 
-      {/* MINI CARDS */}
+      {/* Mini Cards Section */}
       <div className="py-10 px-5">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5">
           {[
@@ -103,63 +113,70 @@ const OrderOnline = () => {
         </div>
       </div>
 
-      {/* GREETING CAKES SELECTIONS */}
-      <div className="py-10 px-32">
+      {/* Greeting Cakes Section */}
+      <div className="py-10 px-6 sm:px-16 md:px-32">
         <div className="flex justify-between mb-10">
           <h1 className="text-black text-3xl font-extrabold">Greeting Cakes</h1>
-          <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-200 font-extrabold px-10 py-4 rounded-full">
+          <motion.button
+            className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-200 font-extrabold px-10 py-4 rounded-full"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
             See More
-          </button>
+          </motion.button>
         </div>
 
-        {/* SELECTION */}
-        <div className="flex justify-between">
+        {/* Cake Selection */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            {
-              name: "candleCake",
-              img: candleCake,
-            },
-            {
-              name: "cheeryChoco",
-              img: cheeryChoco,
-            },
-            {
-              name: "ChocoTruffle",
-              img: ChocoTruffle,
-            },
-            {
-              name: "CustardSponge",
-              img: CustardSponge,
-            },
-            {
-              name: "DrippingCake",
-              img: DrippingCake,
-            },
-            {
-              name: "IceCreamCake",
-              img: IceCreamCake,
-            },
-            {
-              name: "PastryMoonCake",
-              img: PastryMoonCake,
-            },
+            { name: "Candle Cake", img: candleCake },
+            { name: "Cheery Choco", img: cheeryChoco },
+            { name: "Choco Truffle", img: ChocoTruffle },
+            { name: "Custard Sponge", img: CustardSponge },
+            { name: "Dripping Cake", img: DrippingCake },
+            { name: "Ice Cream Cake", img: IceCreamCake },
+            { name: "Pastry Moon Cake", img: PastryMoonCake },
           ].map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className=" border-2 border-red-600 bg-red-500 rounded-xl p-3"
+              className="border-2 border-red-600 bg-red-500 rounded-xl p-3"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
-              <img src={item.img} alt={item.name} className="w-32 md:w-20" />
-              <h2 className="font-extrabold text-white text-xs mb-3">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-32 sm:w-28 md:w-20 lg:w-24 mx-auto mb-4"
+              />
+              <h2 className="font-extrabold text-white text-xs mb-3 text-center">
                 {item.name}
               </h2>
-              <div>
-                {/* COUNTER */}
-                <div>
-
+              <div className="flex justify-between">
+                {/* Counter with buttons */}
+                <div className="flex items-center justify-center gap-2">
+                  <button
+                    className="text-2xl text-white hover:text-gray-300"
+                    onClick={handleDecrement}
+                  >
+                    <CiCircleMinus />
+                  </button>
+                  <h1 className="text-white font-bold text-lg">{value}</h1>
+                  <button
+                    className="text-2xl text-white hover:text-gray-300"
+                    onClick={handleIncrement}
+                  >
+                    <IoIosAddCircleOutline />
+                  </button>
                 </div>
-                <button>Add to tray</button>
+                <motion.button
+                  className="mt-3 px-4 py-2 bg-white text-red-500 font-bold rounded-md hover:bg-gray-200"
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Add to tray
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
