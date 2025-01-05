@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const containerStyle = {
   width: "100%",
@@ -6,10 +7,8 @@ const containerStyle = {
 };
 
 const centerCoordinates = {
-  //   LATITUDE
-  lat: 14.536106,
-  // LONGTITUDE
-  lng: 120.979501,
+  lat: 14.536106, // LATITUDE
+  lng: 120.979501, // LONGITUDE
 };
 
 const GoogleMapComponent = () => {
@@ -41,16 +40,32 @@ const GoogleMapComponent = () => {
 
   return (
     <div className="bg-gradient-to-b from-red-300 via-red-500 to-pink-500 min-h-screen py-10 px-5 md:px-20 font-sans">
-      <div className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-7xl mx-auto shadow-lg min-h-screen">
+      <motion.div
+        className="bg-white py-10 px-5 md:px-20 rounded-xl max-w-7xl mx-auto shadow-lg min-h-screen"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-center text-3xl font-Josefin-Sans text-black font-bold mb-10">
           LOCATION
         </h1>
 
         {/* Google Map Container */}
-        <div id="map" style={containerStyle}></div>
+        <motion.div
+          id="map"
+          style={containerStyle}
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
+        ></motion.div>
 
         {/* Footer */}
-        <footer className="footer text-base-content p-10 mt-10">
+        <motion.footer
+          className="footer text-base-content p-10 mt-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
           <nav>
             <h6 className="footer-title text-xl text-black">Services</h6>
             <a className="link link-hover text-black">Branding</a>
@@ -89,8 +104,8 @@ const GoogleMapComponent = () => {
               </div>
             </fieldset>
           </form>
-        </footer>
-      </div>
+        </motion.footer>
+      </motion.div>
     </div>
   );
 };
