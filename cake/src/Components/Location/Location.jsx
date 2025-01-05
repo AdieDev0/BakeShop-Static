@@ -6,17 +6,17 @@ const containerStyle = {
 };
 
 const centerCoordinates = {
-//   LATITUDE
-    lat: 14.536106,
-// LONGTITUDE
-  lng: 120.979501, 
+  //   LATITUDE
+  lat: 14.536106,
+  // LONGTITUDE
+  lng: 120.979501,
 };
 
 const GoogleMapComponent = () => {
   useEffect(() => {
     // GOOGLE MAP API KEY
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDz6Ksxzwrk5KMWjqqF0og7P61qXKzitA4`; // Replace with your API key
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDz6Ksxzwrk5KMWjqqF0og7P61qXKzitA4`;
     script.async = true;
     document.body.appendChild(script);
 
@@ -34,7 +34,6 @@ const GoogleMapComponent = () => {
       });
     };
 
-    // Cleanup the script on component unmount
     return () => {
       document.body.removeChild(script);
     };
