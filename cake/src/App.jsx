@@ -13,6 +13,7 @@ import Promos from "./Components/Promos/Promos";
 import Franchise from "./Components/Franchising/Franchise";
 import Menu from "./Components/Menu/Menu";
 import OrderOnline from "./Components/OrderOnline/OrderOnline";
+import Location from "./Components/Location/Location";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/franchise" element={<Franchise />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/orderOnline" element={<OrderOnline />} />
+        <Route path="/location" element={<Location />} />
       </Routes>
     </Router>
   );
