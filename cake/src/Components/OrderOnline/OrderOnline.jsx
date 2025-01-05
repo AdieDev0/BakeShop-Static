@@ -184,7 +184,7 @@ const OrderOnline = () => {
       </div>
 
       {/* Footer */}
-      <footer className="footer text-base-content p-10 mt-10">
+      <footer className="footer text-base-content px-44 p-10 mt-10">
           <nav>
             <h6 className="footer-title text-xl text-black">Services</h6>
             <a className="link link-hover text-black">Branding</a>
